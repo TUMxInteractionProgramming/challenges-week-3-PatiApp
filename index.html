@@ -60,17 +60,17 @@
         <!-- #4 #sweat #tab-bar -->
         <div id="tab-bar" class="flex-tab-bar">
             <!-- #4 #tab-bar selected channel should be #highlighted -->
-            <button class="selected">
+            <button id="tab-new" class="selected" onclick="selectTab('tab-new')">
                 <!-- #3 #tab-bar #images -->
                 <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
                 New
             </button>
-            <button>
+            <button id="tab-trending" onclick="selectTab('tab-trending')">
                 <!-- #3 #tab-bar #images -->
                 <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
                 Trending
             </button>
-            <button>
+            <button id="tab-favorites" onclick="selectTab('tab-favorites')">
                 <!-- #3 #tab-bar #images -->
                 <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
                 Favorites
@@ -186,15 +186,8 @@
         </div>
 
 
-
-
-
-
-
-
-
         <div id="chat-bar">
-            <button id="emojis-button">
+            <button id="emojis-button" onclick="toggleEmojis()">
                 <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png">
             </button>
             <div id="emojis">&#x1F601; &#x1F602; &#x1F603; &#x1F604; &#x1F605;

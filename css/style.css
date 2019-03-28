@@ -213,11 +213,17 @@ li.selected {
 .message h3 em {
     font-size: larger;
     font-style: normal;
+    flex: auto; 
+    width: 20%;
+    text-align: right;
 }
 
 .message h3 a {
     /* #3 #chat #link color is primary text */
     color: black;
+    flex: auto;
+    width: 40%;
+    word-wrap: break-word;
 }
 
 .message p {
@@ -275,4 +281,6 @@ li.selected {
     overflow: auto;
     position: absolute;
     bottom: 56px;
+    display: none;
 }
+
