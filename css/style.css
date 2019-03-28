@@ -22,28 +22,71 @@ button, strong {
     text-transform: uppercase;
 }
 
+/*Channels Area*/
 
+#channels {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    right: 60%;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+
+}
 
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
-h1 {
+#channels h1, #chat h1 {
     background-color: #3F51B5;
     color: white;
+    position: fixed;
+    top: 0%;
+    left: inherit;
+    right: inherit;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+}
+#channels h1 {
+    padding-left: 66px;
+}
+#channels h1 img {
+    position: absolute;
+    left: 16px;
+    height: 50px;
+    /*line-height: 24px;*/
+    top: 6px;
+    margin: 0px;
+    /*right: 32px;*/
+    /* bottom: 16px; */
+    vertical-align: middle;
 }
 
-
 /* CHANNELS LIST */
-
+#channels ul {
+    position: absolute;
+    left: inherit;
+    top: 56px;
+    right: 0%;
+    bottom: 72px;
+    
+    overflow: auto;
+}
 /* #4 #sweat #channels */
 ul {
     /* #3 #channels #list modifies h2 to ul */
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    bottom: 0%;
 }
 
-li {
+ul li {
     /* #4 #channel #tile geometry */
     box-sizing: border-box;
     height: 48px;
@@ -51,6 +94,13 @@ li {
     font-size: 16px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
+    overflow: auto;
+}
+.channel-meta {
+    position: absolute;
+    right: 16pt;
+    vertical-align: center;
+    display: inline;
 }
 
 /* #4 active #channel is #highlighted */
@@ -59,10 +109,10 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
-li img {
+/*li img {*/
     /* #4 #middle vertical alignment of icons in the #channels list */
-    vertical-align: middle;
-}
+    /*vertical-align: middle;
+}*/
 
 /* TAB BAR */
 
@@ -72,6 +122,14 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    position: fixed;
+    left: 0%;
+    right: 60%;
+    bottom: 0%;
+}
+.flex-tab-bar {
+    display: flex;
+
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -84,7 +142,11 @@ li img {
     width: 33%;
     height: 72px;
     padding: 16px;
+    text-align: center;
+    flex: auto;
+    justify-content: space-between;
 }
+
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
 #tab-bar button img {
@@ -96,6 +158,27 @@ li img {
 #tab-bar button.selected {
     color: #3F51B5;
     border-bottom: 4px solid #3F51B5;
+}
+
+/*chat-area*/
+#chat {
+    position: absolute;
+    background: #F5F5F5;
+    left: 40%;
+    right: 0%;
+    height: 100%;
+    top: 0%;
+    bottom: 0%;
+}
+
+#message-container {
+    position: absolute;
+    left: 0%;
+    top: 56px;
+    right: 0%;
+    bottom: 72px;
+    
+    overflow: auto;
 }
 
 
@@ -110,11 +193,17 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    position: relative;
 }
 
 
+/*metadata*/
 .message h3 {
     font-size: medium;
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    align-items: stretch;
 }
 
 .message h3 em {
@@ -136,10 +225,50 @@ li img {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }
 
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
 }
+#chat-bar {
+    /* #3 #tab-bar #container should be white */
+    background-color: white;
+    /* #3 #tab-bar #container has all buttons centered */
+    /*text-align: center;*/
+    position: fixed;
+    left: 40%;
+    right: 0%;
+    bottom: 0%;
+    height: 72px;
+}
 
+#emojis-button{
+    background-color: white;
+    border: none;
+    font-size: 13px;
+
+    /* #4 #tab-bar buttons have a width of #one-third of the available space */
+    height: 72px;
+    padding: 16px;
+    flex: none;
+    justify-content: left;
+}
+
+#emojis {
+    background-color: white;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    padding: 16px;
+    margin-left: 16px;
+    margin-top: 284px;
+    font-size: 28px;
+    text-align: left;
+    overflow: auto;
+    position: absolute;
+    bottom: 56px;
+}
