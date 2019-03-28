@@ -66,6 +66,10 @@ button, strong {
     /* bottom: 16px; */
     vertical-align: middle;
 }
+#chat h1 a {
+    color: white;
+    text-decoration: none;
+}
 
 /* CHANNELS LIST */
 #channels ul {
