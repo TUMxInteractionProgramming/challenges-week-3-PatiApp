@@ -145,7 +145,7 @@ li.selected {
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
     height: 72px;
-    padding: 16px;
+    /* padding: 16px; */
     text-align: center;
     flex: auto;
     justify-content: space-between;
